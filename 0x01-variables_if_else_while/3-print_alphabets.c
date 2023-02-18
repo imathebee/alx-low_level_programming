@@ -7,16 +7,12 @@
  */
 int main(void)
 {
-char c = 'a';
-
-do {
+for (c = 'a'; c <= 'z' || c <= 'Z'; c++)
+{
 putchar(c);
-c++;
-} while (c <= 'z' && c <= 'Z');
-
+}
 {
 putchar('\n');
 }
-
 return (0);
 }
