@@ -18,13 +18,10 @@ for (i = 0; i <= n; i++)
 for (j = 0; j <= n; j++)
 {
 result = i * j;
-if (j == 0)
+printf("%d", result);
+if (j < n)
 {
-printf("%3d", result);
-}
-else
-{
-printf(", %3d", result);
+printf(", ");
 }
 }
 printf("\n");
