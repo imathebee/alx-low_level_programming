@@ -5,15 +5,15 @@
  */
 void print_line(int n)
 {
-int j;
-for (j = 0; j < n; j++)
-{
 if (n <= 0)
 {
 _putchar('\n');
 return;
 }
+while (n > 0)
+{
 _putchar('-');
+n--;
 }
 _putchar('\n');
 }
