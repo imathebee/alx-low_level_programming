@@ -8,18 +8,17 @@
 int main(void)
 {
 int i;
-unsigned int first = 1;
-unsigned int second = 2;
-unsigned int next;
-printf("%d, %d", first, second);
+int num1 = 1;
+int num2 = 2;
+int fib;
+printf("%d, %d", num1, num2);
 for (i = 2; i < 98; i++)
 {
-next = first + second;
-printf(", %u", next);
-first = second;
-second = next;
+fib = num1 + num2;
+printf(", %d", fib);
+num1 = num2;
+num2 = fib;
 }
 printf("\n");
 return (0);
 }
-
