@@ -9,16 +9,16 @@
 int main(void)
 {
 int i;
-int t1 = 1;
-int t2 = 2;
-int nextTerm;
-printf("%d, %d", t1, t2);
+long int t1 = 1;
+long int t2 = 2;
+long int nextTerm;
+printf("%ld, %ld", t1, t2);
 for (i = 3; i <= 50; i++)
 {
 nextTerm = t1 + t2;
 t1 = t2;
 t2 = nextTerm;
-printf(", %d", nextTerm);
+printf(", %ld", nextTerm);
 }
 printf("\n");
 return (0);
