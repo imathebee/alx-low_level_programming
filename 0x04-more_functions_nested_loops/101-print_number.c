@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * print_number - prints an integer to the console using _putchar
  * @n: integer to print
