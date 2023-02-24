@@ -1,32 +1,32 @@
+#include <stdio.h>
 #include "main.h"
-#include <math.h>
-#include <inttypes.h>
 /**
- * print_number - prints an integer to the console using _putchar
- * @n: integer to print
- *
-**/
+  * print_number - prints a number
+  * @n: the number
+  *
+  * Return: void
+  */
 void print_number(int n)
 {
-intmax_t digit;
-intmax_t divisor;
-digit = 1;
-divisor = 1;
-if (n < 0)
+if (n == -2147483648)
+{
+_putchar('-');
+_putchar('2');
+print_number(147483648);
+}
+else if (n < 0)
 {
 _putchar('-');
 n = -n;
+print_number(n);
 }
-while (n / divisor > 9)
+else if (n < 10)
 {
-divisor *= 10;
+_putchar(n + '0');
 }
-while (divisor != 0)
+else if (n >= 10)
 {
-digit = n / divisor;
-_putchar(digit + '0');
-n %= divisor;
-divisor /= 10;
+print_number(n / 10);
+print_number(n % 10);
 }
 }
-
