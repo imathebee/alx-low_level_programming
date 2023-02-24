@@ -1,5 +1,6 @@
 #include "main.h"
 #include <math.h>
+#include <inttypes.h>
 /**
  * print_number - prints an integer to the console using _putchar
  * @n: integer to print
@@ -7,8 +8,8 @@
 **/
 void print_number(int n)
 {
-int digit;
-int divisor;
+intmax_t digit;
+intmax_t divisor;
 digit = 1;
 divisor = 1;
 if (n < 0)
