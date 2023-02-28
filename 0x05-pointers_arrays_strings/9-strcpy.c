@@ -16,5 +16,5 @@ src++;
 dest++;
 }
 *dest = '\0';
-return ((char *)dest);
+return (dest);
 }
