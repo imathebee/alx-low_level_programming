@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-char str[] = "Expect the best. Prepare  worst. Capitalize comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+char str[] = "Expect the best. Prepare  worst. Capitalize comes.\nhello wld!";
 char *ptr;
 ptr = cap_string(str);
 printf("%s", ptr);
