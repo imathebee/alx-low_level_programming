@@ -22,7 +22,8 @@ for (j = 0; j < 10; j++)
 {
 if (i + j < size)
 {
-printf("%02x ", (unsigned char)b[i + j]);
+printf("%02x%02x ", (unsigned char)b[i + j], (unsigned char)b[i + j + 1]);
+j++;
 }
 else
 {
