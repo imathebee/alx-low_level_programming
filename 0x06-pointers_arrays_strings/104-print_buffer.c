@@ -8,41 +8,32 @@
  */
 void print_buffer(char *b, int size)
 {
-int i;
-int j;
-if (size <= 0)
-{
-printf("\n");
-return;
-}
+int i, j;
 for (i = 0; i < size; i += 10)
 {
-printf("%08x: ", i);
+printf("%08x:", i);
 for (j = 0; j < 10; j++)
 {
-if (i + j < size)
-{
-printf("%02x%02x ", (unsigned char)b[i + j], (unsigned char)b[i + j + 1]);
-j++;
-}
+if (j % 2 == 0)
+printf(" ");
+if (i + j >= size)
+printf("  ");
 else
-{
-printf("   ");
-}
+printf("%02x", *(b + i + j));
 }
 printf(" ");
 for (j = 0; j < 10; j++)
 {
-if (i + j < size)
-{
-char c = b[i + j];
-if (c < 32 || c > 126)
-{
-c = '.';
-}
-printf("%c", c);
-}
+if (i + j >= size)
+break;
+if (*(b + i + j) < 32 || *(b + i + j) > 126)
+printf(".");
+else
+printf("%c", *(b + i + j));
 }
 printf("\n");
 }
 }
+
+
+
