@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main - Entry point
  * Description: Prints the minimum number of coins to make change for an amount
@@ -11,10 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-int cents;
-int coins;
-cents = 0;
-coins = 0;
+int cents, coins = 0;
 if (argc != 2)
 {
 printf("Error\n");
