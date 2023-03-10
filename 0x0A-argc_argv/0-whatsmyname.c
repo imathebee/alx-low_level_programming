@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-printf("Program name: %s\n", argv[0]);
-printf("Number of arguments: %d\n", argc - 1);
+(void)argc;
+printf("%s\n", argv[0]);
 return (0);
 }
