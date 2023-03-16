@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 /**
  * _realloc - Reallocates a memory block using malloc and free
  * @ptr: A pointer to the memory previously allocated with malloc
@@ -8,9 +7,9 @@
  *
  * Return: A pointer to the newly allocated memory block,
  * or NULL if the function fails
- * Description: The contents of the old memory block will be
- * copied to the newly allocated space, in the range from the start
- * of ptr up to the minimum of the old and new sizes.
+ * Description: The contents of the old memory block
+ * will be copied to the newly allocated space, in the range
+ * from the start of ptr up to the minimum of the old and new sizes.
  * If new_size > old_size, the "added" memory should not be initialized.
  * If new_size == old_size, do not do anything and return ptr.
  * If ptr is NULL, then the call is equivalent to malloc(new_size),
@@ -22,33 +21,29 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-void *new_ptr;
-if (new_size == 0)
+char *new_ptr, *temp_ptr;
+unsigned int i;
+if (new_size == old_size)
+return (ptr);
+if (ptr == NULL)
+{
+new_ptr = malloc(new_size);
+if (new_ptr == NULL)
+return (NULL);
+free(ptr);
+return (new_ptr);
+}
+if (new_size == 0 && ptr != NULL)
 {
 free(ptr);
 return (NULL);
 }
-if (ptr == NULL)
-{
-return (malloc(new_size));
-}
-if (new_size == old_size)
-{
-return (ptr);
-}
 new_ptr = malloc(new_size);
 if (new_ptr == NULL)
-{
 return (NULL);
-}
-if (new_size > old_size)
-{
-memcpy(new_ptr, ptr, old_size);
-}
-else
-{
-memcpy(new_ptr, ptr, new_size);
-}
+temp_ptr = ptr;
+for (i = 0; i < old_size; i++)
+new_ptr[i] = temp_ptr[i];
 free(ptr);
 return (new_ptr);
 }
