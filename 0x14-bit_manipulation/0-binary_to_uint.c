@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 /**
  * binary_to_uint - converts a binary number to an unsigned int
  * @b: pointer to a string of 0 and 1 chars
@@ -20,6 +21,10 @@ return (0);
 for (i = 0; i < len; i++)
 {
 if (b[i] != '0' && b[i] != '1')
+{
+return (0);
+}
+if (result > UINT_MAX / 2)
 {
 return (0);
 }
