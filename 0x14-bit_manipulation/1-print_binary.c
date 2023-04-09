@@ -31,5 +31,4 @@ if (!leading_zeros_skipped)
 {
 _putchar('0');
 }
-_putchar('\n');
 }
