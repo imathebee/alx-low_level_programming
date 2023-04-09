@@ -24,11 +24,11 @@ if (b[i] != '0' && b[i] != '1')
 {
 return (0);
 }
+result = (result << 1) + (b[i] - '0');
 if (result > UINT_MAX / 2)
 {
 return (0);
 }
-result = (result << 1) + (b[i] - '0');
 }
 return (result);
 }
