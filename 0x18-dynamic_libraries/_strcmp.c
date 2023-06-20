@@ -1,12 +1,21 @@
 #include "main.h"
 /**
- *_strcmp - Compares two strings.
- *@s1: Pointer to the first string.
- *@s2: Pointer to the second string.
- *Return: An integer less than, equal to, or greater than zero if s1 is found,
- *respectively, to be less than, to match, or be greater than s2.
-*/
+ * _strcmp - concatenates n bytes from a string to another
+ * @s1: Firste string
+ * @s2: Second string
+ *
+ * Return: a pointer to the resulting string dest
+ */
 int _strcmp(char *s1, char *s2)
 {
+while (*s1 == *s2)
+{
+if (*s1 == 0)
+{
 return (0);
+}
+s1++;
+s2++;
+}
+return (*s1 - *s2);
 }
