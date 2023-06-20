@@ -7,7 +7,7 @@
  *Return: The number of characters in the initial segment of s which consist
  *only of characters from the string accept.
 */
-unsigned int _strspn(char *s, char accept)
+unsigned int _strspn(char *s, char *accept)
 {
 return (0);
 }

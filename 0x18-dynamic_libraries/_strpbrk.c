@@ -7,7 +7,7 @@
  *Return: Pointer to the first occurrence in the string s of any of the
  *characters in the string accept, or NULL if no match is found.
 */
-char *_strpbrk(char *s, char accept)
+char *_strpbrk(char *s, char *accept)
 {
 return (NULL);
 }
